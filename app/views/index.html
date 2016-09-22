@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+		<title>Login and Registration</title>
+		<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	</head>
+	<body>
+		{% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+		<h2>Login</h2>
+		<form action='/login' method='POST'>
+			<label for="email_address">Email Address: <input type="text" name="email_address" id="email_address"></label><br><br>
+			<label for="password">Password: <input type="password" name="password" id="password"></label><br><br>
+			<input type="submit" value="Login">
+		</form>
+		<hr>
+		<h2>Register</h2>
+		<form action='/register' method='POST'>
+			<label for="first_name">First Name: <input type="text" name="first_name" id="first_name"></label><br><br>
+			<label for="last_name">Last Name: <input type="text" name="last_name" id="last_name"></label><br><br>
+			<label for="email_address">Email Address: <input type="text" name="email_address" id="email_address"></label><br><br>
+			<label for="password">Password: <input type="password" name="password" id="password"></label><br><br>
+			<label for="c_password">Confirm password: <input type="password" name="c_password" id="c_password"></label><br><br>
+			<input type="submit" value="Register">
+		</form>
+		<hr>
+
+	</body>
+</html>
