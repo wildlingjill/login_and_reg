@@ -1,7 +1,5 @@
-"""
-    Database Specific Configuration File
-"""
-""" Put Generic Database Configurations here """
+# """Database Specific Configuration File"""
+# """ Put Generic Database Configurations here """
 import os
 
 class DBConfig(object):
@@ -10,7 +8,7 @@ class DBConfig(object):
     DB_DRIVER = 'mysql'
     DB_ORM = False
 
-""" Put Development Specific Configurations here """
+# """ Put Development Specific Configurations here """
 class DevelopmentDBConfig(DBConfig):
     DB_USERNAME = 'root'
     DB_PASSWORD = 'root'
@@ -22,14 +20,14 @@ class DevelopmentDBConfig(DBConfig):
         'unix_socket': '/Applications/MAMP/tmp/mysql/mysql.sock'
     }
 
-""" Put Staging Specific Configurations here """
+# """ Put Staging Specific Configurations here """
 class StagingDBConfig(DBConfig):
     DB_USERNAME = 'root'
     DB_PASSWORD = 'root'
     DB_DATABASE_NAME = 'login_and_reg'
     DB_HOST = 'localhost'
 
-""" Put Production Specific Configurations here """
+# """ Put Production Specific Configurations here """
 class ProductionDBConfig(DBConfig):
     DB_USERNAME = 'root'
     DB_PASSWORD = 'root'
